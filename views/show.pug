@@ -1,0 +1,10 @@
+extends layout
+
+block main-content
+  h1 Top 15 Most Watched Shows
+  ul
+    each show in shows
+      li
+        h2
+          a(href=`https://imdb.com/title/${show.show.ids.imdb}`, target="_blank")= show.show.title
+          | (#{show.show.year})
